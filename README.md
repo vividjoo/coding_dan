@@ -5,3 +5,6 @@
 - framework: spring-boot
 - db: mariadb (in docker)
 - orm: JPA
+
+## Test 코드
+- JUnit4
