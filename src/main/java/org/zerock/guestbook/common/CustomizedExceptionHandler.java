@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.zerock.guestbook.controller.TaRestCallBotController;
+import org.zerock.guestbook.domain.TaRestCallBotResponseVO;
 
 import java.util.Date;
 
@@ -20,13 +21,13 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> callBotException(Exception e, WebRequest request) {
-        ExceptionResponse exceptionResponse = null;
+        TaRestCallBotResponseVO exceptionResponse = null;
         if("empty".equals(e.getMessage())) {
-            exceptionResponse = new ExceptionResponse(900, e.getMessage(), "empty", null, null, null);
+            exceptionResponse = new TaRestCallBotResponseVO(900, e.getMessage(), "empty", null, null, null);
         }else if("null".equals(e.getMessage())){
-            exceptionResponse = new ExceptionResponse(902, e.getMessage(), "null", null, null, null);
+            exceptionResponse = new TaRestCallBotResponseVO(902, e.getMessage(), "null", null, null, null);
         }else{
-            exceptionResponse = new ExceptionResponse(999, e.getMessage(), "null", null, null, null);
+            exceptionResponse = new TaRestCallBotResponseVO(999, e.getMessage(), "null", null, null, null);
         }
         return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }

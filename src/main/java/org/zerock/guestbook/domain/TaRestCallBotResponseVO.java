@@ -1,25 +1,18 @@
 package org.zerock.guestbook.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
-//@Bu
-// ilder
-public class TaRestCallBotResponseVO extends Throwable {
-//    public TaRestCallBotResponseVO(int resultCode, String errorMsg, String callId, List<String> summary, List<String> keyword,
-//                            List<Autocat> autocats){
-//        this.resultCode = resultCode;
-//        this.errorMsg = errorMsg;
-//        this.callId = callId;
-//        this.summary = summary;
-//        this.keyword = keyword;
-//        this.autocat = autocats;
-//    }
+@AllArgsConstructor
+@NoArgsConstructor
+public class TaRestCallBotResponseVO  {
     /**
      * @author Joo 2022.04.11
      * @description
@@ -61,7 +54,5 @@ public class TaRestCallBotResponseVO extends Throwable {
         private String code;
         private String name;
     }
-
-//    public static class TaRestCallBotResponseVOBuilder {
-//    }
 }
+
