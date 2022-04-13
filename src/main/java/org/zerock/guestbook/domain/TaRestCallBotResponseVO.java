@@ -8,17 +8,18 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
-@Builder
+//@Bu
+// ilder
 public class TaRestCallBotResponseVO extends Throwable {
-    public TaRestCallBotResponseVO(int resultCode, String errorMsg, String callId, List<String> summary, List<String> keyword,
-                            List<Autocat> autocats){
-        this.resultCode = resultCode;
-        this.errorMsg = errorMsg;
-        this.callId = callId;
-        this.summary = summary;
-        this.keyword = keyword;
-        this.autocat = autocats;
-    }
+//    public TaRestCallBotResponseVO(int resultCode, String errorMsg, String callId, List<String> summary, List<String> keyword,
+//                            List<Autocat> autocats){
+//        this.resultCode = resultCode;
+//        this.errorMsg = errorMsg;
+//        this.callId = callId;
+//        this.summary = summary;
+//        this.keyword = keyword;
+//        this.autocat = autocats;
+//    }
     /**
      * @author Joo 2022.04.11
      * @description
