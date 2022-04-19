@@ -23,7 +23,7 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler {
         ExceptionResponse exceptionResponse = null;
         if("empty".equals(e.getMessage())) {
             exceptionResponse = new ExceptionResponse(900, e.getMessage(), "empty", null, null, null);
-        }else if("null".equals(e.getMessage())){
+        }else if("callId is null".equals(e.getMessage())){
             exceptionResponse = new ExceptionResponse(902, e.getMessage(), "null", null, null, null);
         }else{
             exceptionResponse = new ExceptionResponse(999, e.getMessage(), "null", null, null, null);

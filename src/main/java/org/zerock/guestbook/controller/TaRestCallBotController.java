@@ -39,7 +39,7 @@ public class TaRestCallBotController {
         if ("".equals(callBotVO.getCallId())) {
             throw new TaRestCallBotException("empty");
         } else if (callBotVO.getCallId() == null) {
-            throw new TaRestCallBotException("null");
+            throw new TaRestCallBotException("callId is null");
         } else {
             taRestCallBotResponseVO.setResultCode(200);
             taRestCallBotResponseVO.setCallId(callBotVO.getCallId());

@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 //@Bu
 // ilder
-public class TaRestCallBotResponseVO extends Throwable {
+public class TaRestCallBotResponseVO {
 //    public TaRestCallBotResponseVO(int resultCode, String errorMsg, String callId, List<String> summary, List<String> keyword,
 //                            List<Autocat> autocats){
 //        this.resultCode = resultCode;
@@ -52,6 +52,9 @@ public class TaRestCallBotResponseVO extends Throwable {
     private List<String> summary;
     @NotNull
     private List<String> keyword;
+
+    @NotNull
+    private List<String> event;
 
     @Valid
     @NotNull
